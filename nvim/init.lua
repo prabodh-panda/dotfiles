@@ -130,7 +130,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- ****************************** Autocommands ******************************
 --  See `:help lua-guide-autocommands`
 local function augroup(name)
-  return vim.api.nvim_create_augroup('yedhins-' .. name, { clear = true })
+  return vim.api.nvim_create_augroup('prabodhs-' .. name, { clear = true })
 end
 
 -- Force trigger since ColorScheme fires before this code on first load
@@ -176,7 +176,7 @@ end, { nargs = '+', complete = 'command' })
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
-  group = augroup 'yedhins-highlight-yank',
+  group = augroup 'prabodhs-highlight-yank',
   callback = function()
     vim.highlight.on_yank()
   end,
